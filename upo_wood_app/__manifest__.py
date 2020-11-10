@@ -3,11 +3,10 @@
     'name': "UpoWood_app",
 
     'summary': """
-        Short (1 phrase/line) summary of the module's purpose, used as
-        subtitle on modules listing or apps.openerp.com""",
+        Sumario del modulo UPOWOOD""",
 
     'description': """
-        Long description of module's purpose
+        Descripcion del modulo UPOWOOD
     """,
 
     'author': "My Company",
@@ -24,7 +23,8 @@
 
     # always loaded
     'data': [
-        # 'security/ir.model.access.csv',
+        'security/security.xml',
+        'security/ir.model.access.csv',
         'views/views.xml',
         'views/templates.xml',
     ],
