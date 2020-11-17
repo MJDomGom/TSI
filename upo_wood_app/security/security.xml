@@ -1,0 +1,5 @@
+<odoo>
+    <record id="upo_wood_app_manager" model="res.groups">
+        <field name="name">UPOWOOD / Manager</field>
+    </record>
+</odoo>

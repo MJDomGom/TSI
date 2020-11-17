@@ -1,8 +1,5 @@
 # -*- coding: utf-8 -*-
-
- from odoo import models, fields, api
-
-
+from odoo import models, fields, api
 # class upo_wood_app(models.Model):
 #     _name = 'upo_wood_app.upo_wood_app'
 #     _description = 'upo_wood_app.upo_wood_app'
@@ -16,7 +13,6 @@
 #     def _value_pc(self):
 #         for record in self:
 #             record.value2 = float(record.value) / 100
-
 class Venta(models.Model):
     _name = 'upo_wood_app.venta'
     _description = 'Clase venta para UPOWOOD'
@@ -26,8 +22,6 @@ class Venta(models.Model):
     fechaVenta = fields.Date('Fecha de la venta',required=True, autodate = True)
     total = fields.Integer('Cantidad total de la venta',required=True)
     #Añadir las relaciones entre clases
-
-
 class Devolucion(models.Model):
     _name = 'upo_wood_app.devolucion'
     _description = 'Clase devolucion para UPOWOOD'
@@ -89,16 +83,16 @@ class Producto(models.Model):
     idProducto = fields.Integer("Numero del producto", required=True)
     fechaFabricacion = fields.Date('Fecha de la fabricacion del producto',required=True)
     precio = fields.Integer("Precio del producto",required=True)
+    stock = fields.Integer("Stock del producto",required=True)
+    foto = fields.Binary("FotoProducto")
     #Añadir las relaciones entre clases
 
-class Modelo(models.Model):
-    _name = 'upo_wood_app.modelo'
-    _description = 'Clase modelo para UPOWOOD'
+class Categoria(models.Model):
+    _name = 'upo_wood_app.categoria'
+    _description = 'Clase categoria para UPOWOOD'
 
     nombre = fields.Char(string="Nombre del modelo",required=True)
     descripcion = fields.Text("Descripcion del modelo en cuestion")
-    stock = fields.Integer("Stock del modelo",required=True)
-    foto = fields.Binary("FotoModelo")
     #Añadir las relaciones entre clases
 
 class Material(models.Model):
@@ -112,7 +106,7 @@ class Material(models.Model):
     foto = fields.Binary("FotoMaterial")
     #Añadir las relaciones entre clases
 
- class Proveedor(models.Model):
+class Proveedor(models.Model):
     _name = 'upo_wood_app.proveedor'
     _description = 'Clase proveedor para UPOWOOD'
 
