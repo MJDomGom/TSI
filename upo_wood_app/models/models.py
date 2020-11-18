@@ -1,8 +1,5 @@
 # -*- coding: utf-8 -*-
-
- from odoo import models, fields, api
-
-
+from odoo import models, fields, api
 # class upo_wood_app(models.Model):
 #     _name = 'upo_wood_app.upo_wood_app'
 #     _description = 'upo_wood_app.upo_wood_app'
@@ -16,7 +13,6 @@
 #     def _value_pc(self):
 #         for record in self:
 #             record.value2 = float(record.value) / 100
-
 class Venta(models.Model):
     _name = 'upo_wood_app.venta'
     _description = 'Clase venta para UPOWOOD'
@@ -133,7 +129,7 @@ class Material(models.Model):
     producto_ids = fields.Many2many('upo_wood_app.producto')
     proveedor_ids = fields.Many2many('upo_wood_app.proveedor')
 
- class Proveedor(models.Model):
+class Proveedor(models.Model):
     _name = 'upo_wood_app.proveedor'
     _description = 'Clase proveedor para UPOWOOD'
 
