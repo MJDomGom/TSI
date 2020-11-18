@@ -1,0 +1,45 @@
+<odoo>
+		<record model="ir.ui.view" id="upo_wood_app_categoria_form">
+			<field name="name">categoria.form</field>
+			<field name="model">upo_wood_app.categoria</field>
+			<field name="arch" type="xml">
+				<form string="Categorias">
+					<sheet layout="auto">
+                        <group>
+                            <field name="name" />
+                        </group>
+                         <notebook>
+                            <page name="datos_categorias" string="Datos de categorias">
+                                <group>
+					                <field name="descripcion" />
+                                    <field name="producto_id">
+                                        <field name="name"/>
+                                    </field>
+                                </group>
+                            </page>
+                        </notebook>            
+                    </sheet>
+				</form>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="upo_wood_app_categoria_tree">
+			<field name="name">categoria.tree</field>
+			<field name="model">upo_wood_app.categoria</field>
+			<field name="arch" type="xml">
+				<tree string="Tree de categorias">
+                    <field name="name"/>  
+					<field name="descripcion" />
+				</tree>
+			</field>
+		</record>
+
+        <record id="categoria_list_action" model="ir.actions.act_window">
+            <field name="name">Categoria</field>
+            <field name="res_model">upo_wood_app.categoria</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                 <p class="o_view_nocontent_smiling_face">Crear la primera categoria</p>
+            </field>
+        </record>
+</odoo>

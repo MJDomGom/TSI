@@ -1,0 +1,45 @@
+<odoo>
+		<record model="ir.ui.view" id="upo_wood_app_factura_form">
+			<field name="name">factura.form</field>
+			<field name="model">upo_wood_app.factura</field>
+			<field name="arch" type="xml">
+				<form string="Facturas">
+					<sheet layout="auto">
+                        <group>
+                            <field name="name" />
+                        </group>
+                         <notebook>
+                            <page name="datos_facturas" string="Datos de facturas">
+                                <group>
+					                <field name="fecha" />
+                                    <field name="venta_id">
+                                        <field name="name" />
+                                    </field>
+                                </group>
+                            </page>
+                        </notebook>            
+                    </sheet>
+				</form>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="upo_wood_app_factura_tree">
+			<field name="name">factura.tree</field>
+			<field name="model">upo_wood_app.factura</field>
+			<field name="arch" type="xml">
+				<tree string="Tree de envios">
+                    <field name="name"/>  
+					<field name="fecha" />
+				</tree>
+			</field>
+		</record>
+
+        <record id="factura_list_action" model="ir.actions.act_window">
+            <field name="name">Factura</field>
+            <field name="res_model">upo_wood_app.factura</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                 <p class="o_view_nocontent_smiling_face">Crear la primera factura</p>
+            </field>
+        </record>
+</odoo>

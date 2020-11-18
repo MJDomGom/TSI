@@ -1,0 +1,49 @@
+<odoo>
+		<record model="ir.ui.view" id="upo_wood_app_devolucion_form">
+			<field name="name">devolucion.form</field>
+			<field name="model">upo_wood_app.devolucion</field>
+			<field name="arch" type="xml">
+				<form string="Devoluciones">
+					<sheet layout="auto">
+                        <group>
+                            <field name="name" />
+                        </group>
+                         <notebook>
+                            <page name="datos_devoluciones" string="Datos de la devolucion">
+                                <group>
+					                <field name="motivo" />
+					                <field name="isAprobado"/> 
+					                <field name="fechaDevolucion" />
+									<field name="venta_id">
+										<field name="name"/>
+									</field>
+                                </group>
+                            </page>
+                        </notebook>            
+                    </sheet>
+				</form>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="upo_wood_app_devolucion_tree">
+			<field name="name">devolucion.tree</field>
+			<field name="model">upo_wood_app.devolucion</field>
+			<field name="arch" type="xml">
+				<tree string="Tree de devoluciones">
+					<field name="name" />
+					<field name="motivo" />
+					<field name="isAprobado" />
+					<field name="fechaDevolucion" />
+				</tree>
+			</field>
+		</record>
+
+        <record id="devolucion_list_action" model="ir.actions.act_window">
+            <field name="name">Devolucion</field>
+            <field name="res_model">upo_wood_app.devolucion</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                 <p class="o_view_nocontent_smiling_face">Crear la primera devolucion</p>
+            </field>
+        </record>
+</odoo>

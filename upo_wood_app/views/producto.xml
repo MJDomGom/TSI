@@ -1,0 +1,55 @@
+<odoo>
+		<record model="ir.ui.view" id="upo_wood_app_producto_form">
+			<field name="name">producto.form</field>
+			<field name="model">upo_wood_app.producto</field>
+			<field name="arch" type="xml">
+				<form string="Productos">
+					<sheet layout="auto">
+                        <group>
+                            <field name="name" />
+                        </group>
+                         <notebook>
+                            <page name="datos_productos" string="Datos del producto">
+                                <group>
+					                <field name="fechaFabricacion" />
+					                <field name="precio" widget="monetary"/> 
+					                <field name="stock" />
+									<field name="venta_ids">
+                                        <field name="name" />
+                                    </field>
+									<field name="categoria_id">
+                                        <field name="name" />
+                                    </field>
+									<field name="material_id">
+                                        <field name="name" />
+                                    </field>
+                                </group>
+                            </page>
+                        </notebook>            
+                    </sheet>
+				</form>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="upo_wood_app_producto_tree">
+			<field name="name">productos.tree</field>
+			<field name="model">upo_wood_app.producto</field>
+			<field name="arch" type="xml">
+				<tree string="Tree de productos">
+					<field name="name" />
+					<field name="fechaFabricacion" />
+					<field name="precio" />
+					<field name="stock" />
+				</tree>
+			</field>
+		</record>
+
+        <record id="producto_list_action" model="ir.actions.act_window">
+            <field name="name">Producto</field>
+            <field name="res_model">upo_wood_app.producto</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                 <p class="o_view_nocontent_smiling_face">Crear el primer producto</p>
+            </field>
+        </record>
+</odoo>

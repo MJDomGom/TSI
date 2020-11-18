@@ -1,0 +1,61 @@
+<odoo>
+		<record model="ir.ui.view" id="upo_wood_app_venta_form">
+			<field name="name">venta.form</field>
+			<field name="model">upo_wood_app.venta</field>
+			<field name="arch" type="xml">
+				<form string="Ventas">               
+					<sheet layout="auto">
+                        <group>
+                            <field name="name" />
+                        </group>
+                        <notebook>
+                            <page name="datos_ventas" string="Datos de la venta">
+                                <group>
+					                <field name="IVA" />
+					                <field name="fechaVenta" />
+                                    <field name="total" widget="monetary"/>
+                                    <field name="producto_ids">
+                                        <field name="name"/>
+                                    </field>
+									<field name="persona_ids">
+                                        <field name="name"/>  
+                                    </field>
+									<field name="devolucion_id">
+                                        <field name="name"/>  
+                                    </field>
+									<field name="envio_id">
+                                        <field name="name"/>  
+                                    </field>
+									<field name="factura_id">
+                                        <field name="name"/>  
+                                    </field>
+                                </group>
+                            </page>
+                        </notebook>   
+                    </sheet>
+				</form>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="upo_wood_app_venta_tree">
+			<field name="name">venta.tree</field>
+			<field name="model">upo_wood_app.venta</field>
+			<field name="arch" type="xml">
+				<tree string="Tree de ventas">
+					<field name="name" />
+					<field name="IVA" />
+					<field name="fechaVenta" />
+					<field name="total" />
+				</tree>
+			</field>
+		</record>
+
+        <record id="venta_list_action" model="ir.actions.act_window">
+            <field name="name">Ventas</field>
+            <field name="res_model">upo_wood_app.venta</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                 <p class="o_view_nocontent_smiling_face">Crear la primera venta</p>
+            </field>
+        </record>
+</odoo>

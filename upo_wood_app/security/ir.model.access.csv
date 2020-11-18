@@ -1,2 +1,11 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_upo_wood_app_upo_wood_app,upo_wood_app.upo_wood_app,model_upo_wood_app_upo_wood_app,base.group_user,1,1,1,1
+producto_manager,producto_manager,model_upo_wood_app_producto,base.group_user,1,1,1,1
+venta_manager,venta_manager,model_upo_wood_app_venta,base.group_user,1,1,1,1
+devolucion_manager,devolucion_manager,model_upo_wood_app_devolucion,base.group_user,1,1,1,1
+envio_manager,envio_manager,model_upo_wood_app_envio,base.group_user,1,1,1,1
+albaran_manager,albaran_manager,model_upo_wood_app_albaran,base.group_user,1,1,1,1
+persona_manager,persona_manager,model_upo_wood_app_persona,base.group_user,1,1,1,1
+factura_manager,factura_manager,model_upo_wood_app_factura,base.group_user,1,1,1,1
+categoria_manager,categoria_manager,model_upo_wood_app_categoria,base.group_user,1,1,1,1
+material_manager,material_manager,model_upo_wood_app_material,base.group_user,1,1,1,1
+proveedor_manager,proveedor_manager,model_upo_wood_app_proveedor,base.group_user,1,1,1,1
