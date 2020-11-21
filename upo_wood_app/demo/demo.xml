@@ -1,8 +1,0 @@
-<odoo>
-      <record id="P1" model="upo_wood_app.producto">
-        <field name="name">Silla</field>
-        <field name="fechaFabricacion">2015-09-01</field>
-        <field name="precio">29</field>
-        <field name="stock">403</field>
-      </record>
-</odoo>
