@@ -44,6 +44,17 @@
 			</field>
 		</record>
 
+		<record model="ir.ui.view" id="upo_wood_app_envio_view">
+			<field name="name">envio Calendar</field>
+			<field name="model">upo_wood_app.envio</field>
+			<field name="type">calendar</field>
+			<field name="arch" type="xml">
+				<calendar string="Envios" color="envio" date_start="fechaEnvio" date_stop="fechaLlegada" mode="month">
+					<field name="name" />
+				</calendar>
+			</field>
+		</record>
+
         <record id="envio_list_action" model="ir.actions.act_window">
             <field name="name">Envio</field>
             <field name="res_model">upo_wood_app.envio</field>
