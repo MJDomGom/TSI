@@ -1,0 +1,193 @@
+<odoo>
+  <!-- ENVIOS
+  <record id="E1" model="upo_wood_app.envio">
+    <field name="name">1</field>
+    <field name="direccion">Sevilla, Calle Sepia 3, 2ºB</field>
+    <field name="cp">41010</field>
+    <field name="fechaEnvio">2020-09-01</field>
+    <field name="fechaLlegada">2020-09-12</field>
+
+  </record>
+
+  <record id="E2" model="upo_wood_app.envio">
+    <field name="name">2</field>
+    <field name="direccion">Punta Umbría, Calle Choco 2, 1ºA</field>
+    <field name="cp">21100</field>
+    <field name="fechaEnvio">2020-11-02</field>
+    <field name="fechaLlegada">2020-11-18</field>
+  </record>
+
+  <record id="E3" model="upo_wood_app.envio">
+    <field name="name">3</field>
+    <field name="direccion">Huelva, Calle Puerto 1, 5ºB</field>
+    <field name="cp">21003</field>
+    <field name="fechaEnvio">2020-11-20</field>
+    <field name="fechaLlegada">2020-11-26</field>
+  </record>
+
+  <record id="E4" model="upo_wood_app.envio">
+    <field name="name">4</field>
+    <field name="direccion">Sevilla, Calle Virgen de Consolacion 23, 3ºB</field>
+    <field name="cp">41001</field>
+    <field name="fechaEnvio">2020-10-17</field>
+    <field name="fechaLlegada">2020-10-24</field>
+  </record>
+
+  <!--PERSONAS-->
+  <record id="PE1" model="upo_wood_app.persona">
+    <field name="nombre">Aurelio</field>
+    <field name="password">12345678W</field>
+    <field name="direccion">Sevilla, Calle Sepia 3, 2ºB</field>
+    <field name="name">55483719V</field>
+    <field name="email">aurelio@upo.es</field>
+    <field name="telefono">678453442</field>
+    <field name="isEmpleado">Cliente</field>
+  </record>
+
+  <record id="PE2" model="upo_wood_app.persona">
+    <field name="nombre">Pepe</field>
+    <field name="password">12345678</field>
+    <field name="direccion">Punta Umbría, Calle Choco 2, 1ºA</field>
+    <field name="name">78482719G</field>
+    <field name="email">pepe@upo.es</field>
+    <field name="telefono">642124869</field>
+    <field name="isEmpleado">Cliente</field>
+  </record>
+
+  <record id="PE3" model="upo_wood_app.persona">
+    <field name="nombre">Patricia</field>
+    <field name="password">33123123</field>
+    <field name="direccion">Huelva, Calle Fuente 21, 3ºB</field>
+    <field name="name">49112288M</field>
+    <field name="email">patricia@upo.es</field>
+    <field name="telefono">643558121</field>
+    <field name="isEmpleado">Cliente</field>
+  </record>
+
+  <record id="PE4" model="upo_wood_app.persona">
+    <field name="nombre">Arturo</field>
+    <field name="password">87654321</field>
+    <field name="direccion">Sevilla, Calle Génova 1, 8ºA</field>
+    <field name="name">78483476H</field>
+    <field name="email">arturo@upo.es</field>
+    <field name="telefono">642080900</field>
+    <field name="isEmpleado">Empleado</field>
+  </record>
+
+  <record id="PE5" model="upo_wood_app.persona">
+    <field name="nombre">Manuel Jesus</field>
+    <field name="password">87654321</field>
+    <field name="direccion">Sevilla, Calle Brisa 3, 5ºC</field>
+    <field name="name">47754626T</field>
+    <field name="email">mj@upo.es</field>
+    <field name="telefono">600758999</field>
+    <field name="isEmpleado">Empleado</field>
+  </record>
+
+  <record id="PE6" model="upo_wood_app.persona">
+    <field name="nombre">Fede</field>
+    <field name="password">3312312</field>
+    <field name="direccion">Sevilla, Calle Niebla 2, 3ºA</field>
+    <field name="name">454112326N</field>
+    <field name="email">fede@upo.es</field>
+    <field name="telefono">612232999</field>
+    <field name="isEmpleado">Empleado</field>
+  </record>
+
+  <!--MATERIALES-->
+  <record id="M1" model="upo_wood_app.material">
+    <field name="idMaterial">1</field>
+    <field name="name">Bloques Caoba</field>
+    <field name="descripcion">Material de caoba</field>
+    <field name="precio ">500</field>
+    <field name="foto ">Foto Bloque</field>
+  </record>
+
+  <record id="M2" model="upo_wood_app.material">
+    <field name="idMaterial">2</field>
+    <field name="name">Bloques Pino</field>
+    <field name="descripcion">Material de pino</field>
+    <field name="precio ">300</field>
+    <field name="foto ">Foto Bloque</field>
+  </record>
+
+  <record id="M3" model="upo_wood_app.material">
+    <field name="idMaterial">3</field>
+    <field name="name">Bloques Nogal</field>
+    <field name="descripcion">Material de nogal</field>
+    <field name="precio ">600</field>
+    <field name="foto ">Foto Bloque</field>
+  </record>
+
+
+  <!--VENTAS-->
+  <record id="V1" model="upo_wood_app.venta">
+    <field name="name">1</field>
+    <field name="IVA">21</field>
+    <field name="fechaVenta ">2020-09-06</field>
+    <field name="total ">150</field>
+  </record>
+
+  <record id="V2" model="upo_wood_app.venta">
+    <field name="name">2</field>
+    <field name="IVA">21</field>
+    <field name="fechaVenta ">2020-10-10</field>
+    <field name="total ">300</field>
+  </record>
+
+  <!--DEVOLUCIONES-->
+  <record id="D1" model="upo_wood_app.devolucion">
+    <field name="name">1</field>
+    <field name="motivo">Articulo defectuoso</field>
+    <field name="isAprobado ">True</field>
+    <field name="fechaDevolucion ">2020-09-12</field>
+  </record>
+
+  <record id="D2" model="upo_wood_app.devolucion">
+    <field name="name">2</field>
+    <field name="motivo">Articulo en mal estado</field>
+    <field name="isAprobado ">True</field>
+    <field name="fechaDevolucion ">2020-08-02</field>
+  </record>
+
+  <!--ALBARANES-->
+  <record id="A1" model="upo_wood_app.albaran">
+    <field name="name">1</field>
+    <field name="isEntregado">True</field>
+    <field name="fechaLlegada">2020-09-10</field>
+    <field name="descripcion">2020-09-12</field>
+  </record>
+
+  <record id="A2" model="upo_wood_app.albaran">
+    <field name="name">2</field>
+    <field name="isEntregado">True</field>
+    <field name="fechaLlegada">2020-08-02</field>
+    <field name="descripcion">Albaran de una devolución</field>
+  </record>
+
+  <!--FACTURAS-->
+  <record id="F1" model="upo_wood_app.factura">
+    <field name="name">1</field>
+    <field name="fecha">autodate</field>
+  </record>
+
+  <record id="F2" model="upo_wood_app.factura">
+    <field name="name">2</field>
+    <field name="fecha">2020-10-10</field>
+  </record>
+
+  <!--PROVEEDORES-->
+  <record id="PRV 1" model="upo_wood_app.proveedor">
+    <field name="name">Caoba Logistics</field>
+    <field name="direccion">Pamplona, Calle Petardo 21, 4ºE</field>
+    <field name="cif">B76365789</field>
+    <field name="telefono">905349009</field>
+  </record>
+
+  <record id="PRV 2" model="upo_wood_app.proveedor">
+    <field name="name">Briconuba</field>
+    <field name="direccion">Huelva, Calle Alonso de Ojeda 15</field>
+    <field name="cif">M12334566</field>
+    <field name="telefono">959280284</field>
+  </record> -->
+</odoo> -->

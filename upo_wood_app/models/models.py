@@ -1,18 +1,5 @@
 # -*- coding: utf-8 -*-
 from odoo import models, fields, api
-# class upo_wood_app(models.Model):
-#     _name = 'upo_wood_app.upo_wood_app'
-#     _description = 'upo_wood_app.upo_wood_app'
-
-#     name = fields.Char()
-#     value = fields.Integer()
-#     value2 = fields.Float(compute="_value_pc", store=True)
-#     description = fields.Text()
-#
-#     @api.depends('value')
-#     def _value_pc(self):
-#         for record in self:
-#             record.value2 = float(record.value) / 100
 class Venta(models.Model):
     _name = 'upo_wood_app.venta'
     _description = 'Clase venta para UPOWOOD'
@@ -76,7 +63,7 @@ class Persona(models.Model):
     name =fields.Char(string="DNI o CIF del usuario",required=True)
     email = fields.Char(string="email del usuario",required=True)
     telefono = fields.Integer("Numero de telefono")
-    #foto = fields.Binary("Foto usuario")
+    foto = fields.Binary("Foto usuario")
     isEmpleado = fields.Selection([('empleado','Empleado'),('cliente','Cliente')],"El usuario es empleado o cliente?",required=True)
     #Añadir las relaciones entre clases
     venta_ids = fields.Many2many("upo_wood_app.venta",string="Ventas asociadas a la persona")
@@ -98,7 +85,7 @@ class Producto(models.Model):
     fechaFabricacion = fields.Date("Fecha de la fabricacion del producto",required=True)
     precio = fields.Integer("Precio del producto",required=True)
     stock = fields.Integer("Stock del producto",required=True)
-    #foto = fields.Binary("FotoProducto")
+    foto = fields.Binary("FotoProducto")
     #Añadir las relaciones entre clases
     venta_ids = fields.Many2many("upo_wood_app.venta",string="Venta asociados al producto") 
     categoria_id = fields.Many2one("upo_wood_app.categoria",string="Categoria asociada al producto")
@@ -111,7 +98,7 @@ class Categoria(models.Model):
     name = fields.Char(string="Nombre de la categoria",required=True)
     descripcion = fields.Text("Descripcion de la categoria en cuestion")
     #Añadir las relaciones entre clases
-    producto_id = fields.Many2one("upo_wood_app.producto",string="Producto relacionado con la categoria")
+    producto_id = fields.One2many("upo_wood_app.producto","categoria_id","Producto relacionado con la categoria")
 
 class Material(models.Model):
     _name = 'upo_wood_app.material'
@@ -123,7 +110,7 @@ class Material(models.Model):
     precio = fields.Integer("Precio del material",required=True)
     foto = fields.Binary("FotoMaterial")
     #Añadir las relaciones entre clases
-    producto_id = fields.Many2one("upo_wood_app.producto",string="Producto relacionado con el material")
+    producto_id = fields.One2many("upo_wood_app.producto","material_id","Producto relacionado con el material")
     proveedor_ids = fields.Many2many("upo_wood_app.proveedor",string="Proveedor relacionado con el material")
 
 class Proveedor(models.Model):
@@ -132,7 +119,7 @@ class Proveedor(models.Model):
 
     name = fields.Char(string="Nombre del proveedor",required=True)
     direccion = fields.Text("Direccion del proveedor",required=True)
-    cif =fields.Char(string="CIF del proveedor",required=True)
+    cif = fields.Char(string="CIF del proveedor",required=True)
     telefono = fields.Integer("Numero de telefono")
     #Añadir las relaciones entre clases  
     material_ids = fields.Many2many("upo_wood_app.material",string="Materiales relacionados con proveedor") 

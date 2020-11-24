@@ -15,8 +15,9 @@
 					                <field name="cp"/> 
 					                <field name="fechaEnvio" />
                                     <field name="fechaLlegada"/>
-									<field name="venta_id">
+									<field name="venta_id" widget="many2one">
 										<field name="name"/>
+										<field name="fechaLlegada"/>
 									</field>
 									<field name="albaran_id">
 										<field name="name"/>

@@ -1,54 +1,55 @@
 <odoo>
-		<record model="ir.ui.view" id="upo_wood_app_material_form">
-			<field name="name">material.form</field>
-			<field name="model">upo_wood_app.material</field>
-			<field name="arch" type="xml">
-				<form string="Materiales">
-					<sheet layout="auto">
-                        <group>
-                            <field name="name" />
-                        </group>
-                         <notebook>
-                            <page name="datos_material" string="Datos de materiales">
-                                <group>
-					                <field name="idMaterial" />
-					                <field name="descripcion" />
-					                <field name="precio" widget="monetary"/>
-					            <!--<field name="foto" /> -->
-									<field name="producto_id">
-										<field name="name"/>
-									</field> 
-									 <field name="proveedor_ids"/>
-										<field name="name">
-									</field>
-                                </group>
-                            </page>
-                        </notebook>            
-                    </sheet>
-				</form>
-			</field>
-		</record>
+	<record model="ir.ui.view" id="upo_wood_app_material_form">
+		<field name="name">material.form</field>
+		<field name="model">upo_wood_app.material</field>
+		<field name="arch" type="xml">
+			<form string="Materiales">
+				<sheet layout="auto">
+					<group>
+						<field name="name" />
+					</group>
+					<group>
+						<field name="foto" nolabel="1" widget="image" class="oe_left oe_avatar" />
+					</group>
+					<notebook>
+						<page name="datos_material" string="Datos de materiales">
+							<group>
+								<field name="idMaterial" />
+								<field name="descripcion" />
+								<field name="precio" widget="monetary"/>
+								<field name="proveedor_ids"/>
+									<field name="name">
+								</field>
+								<field name="producto_id"/>
+									<field name="name">
+								</field>
+							</group>
+						</page>
+					</notebook>
+				</sheet>
+			</form>
+		</field>
+	</record>
 
-		<record model="ir.ui.view" id="upo_wood_app_material_tree">
-			<field name="name">material.tree</field>
-			<field name="model">upo_wood_app.material</field>
-			<field name="arch" type="xml">
-				<tree string="Tree de materiales">
-                    <field name="name"/>  
-					<field name="idMaterial" />
-					<field name="descripcion" />
-					<field name="precio" />
-			    <!--<field name="foto" /> -->
-				</tree>
-			</field>
-		</record>
+	<record model="ir.ui.view" id="upo_wood_app_material_tree">
+		<field name="name">material.tree</field>
+		<field name="model">upo_wood_app.material</field>
+		<field name="arch" type="xml">
+			<tree string="Tree de materiales">
+				<field name="name"/>
+				<field name="idMaterial" />
+				<field name="descripcion" />
+				<field name="precio" />
+			</tree>
+		</field>
+	</record>
 
-        <record id="material_list_action" model="ir.actions.act_window">
-            <field name="name">Material</field>
-            <field name="res_model">upo_wood_app.material</field>
-            <field name="view_mode">tree,form</field>
-            <field name="help" type="html">
-                 <p class="o_view_nocontent_smiling_face">Crear el primer material</p>
-            </field>
-        </record>
+	<record id="material_list_action" model="ir.actions.act_window">
+		<field name="name">Material</field>
+		<field name="res_model">upo_wood_app.material</field>
+		<field name="view_mode">tree,form</field>
+		<field name="help" type="html">
+			<p class="o_view_nocontent_smiling_face">Crear el primer material</p>
+		</field>
+	</record>
 </odoo>

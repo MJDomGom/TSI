@@ -8,6 +8,9 @@
                         <group>
                             <field name="name" />
                         </group>
+						<group>
+           					 <field name="foto" nolabel="1" widget="image" class="oe_left oe_avatar" />
+          				</group>
                          <notebook>
                             <page name="datos_productos" string="Datos del producto">
                                 <group>

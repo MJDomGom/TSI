@@ -1,239 +1,301 @@
 <odoo>
-      <record id="P1" model="upo_wood_app.producto">
-        <field name="name">Silla Landurk</field>
-        <field name="fechaFabricacion">2015-09-01</field>
-        <field name="precio">29</field>
-        <field name="stock">403</field>
-      </record>
-      
-      <record id="P2" model="upo_wood_app.producto">
-        <field name="name">Silla Caoba</field>
-        <field name="fechaFabricacion">2016-09-01</field>
-        <field name="precio">40</field>
-        <field name="stock">24</field>
-      </record>
-      
-      <record id="P3" model="upo_wood_app.producto">
-        <field name="name">Mesa Landurk</field>
-        <field name="fechaFabricacion">2015-07-01</field>
-        <field name="precio">89</field>
-        <field name="stock">35</field>
-      </record>
-      
-      <record id="P4" model="upo_wood_app.producto">
-        <field name="name">Mesa Caoba</field>
-        <field name="fechaFabricacion">2017-10-10</field>
-        <field name="precio">109</field>
-        <field name="stock">13</field>
-      </record>
+  <!--PROVEEDORES-->
+  <record id="PRV1" model="upo_wood_app.proveedor">
+    <field name="name">Caoba Logistics</field>
+    <field name="direccion">Pamplona, Calle Petardo 21, 4ºE</field>
+    <field name="cif">B76365789</field>
+    <field name="telefono">905349009</field>
+  </record>
 
-      <record id="P5" model="upo_wood_app.producto">
-        <field name="name">Estanteria Pino</field>
-        <field name="fechaFabricacion">2020-05-11</field>
-        <field name="precio">299</field>
-        <field name="stock">10</field>
-      </record>
+  <record id="PRV2" model="upo_wood_app.proveedor">
+    <field name="name">Briconuba</field>
+    <field name="direccion">Huelva, Calle Alonso de Ojeda 15</field>
+    <field name="cif">M12334566</field>
+    <field name="telefono">959280284</field>
+  </record>
 
-       <record id="P6" model="upo_wood_app.producto">
-        <field name="name">Armario Nogal</field>
-        <field name="fechaFabricacion">2019-01-20</field>
-        <field name="precio">499</field>
-        <field name="stock">15</field>
-      </record>
-      
-      <record id="E1" model="upo_wood_app.envio">
-        <field name="direccion">Sevilla, Calle Sepia 3, 2ºB</field>
-        <field name="cp">41010</field>
-        <field name="fechaEnvio">2020-09-01</field>
-        <field name="fechaLlegada">2020-09-12</field>
-      </record>
-      
-      <record id="E2" model="upo_wood_app.envio">
-        <field name="direccion">Punta Umbría, Calle Choco 2, 1ºA</field>
-        <field name="cp">21100</field>
-        <field name="fechaEnvio">2020-11-02</field>
-        <field name="fechaLlegada">2020-11-18</field>
-      </record>
+  <!--CATEGORIAS-->
+  <record id="C1" model="upo_wood_app.categoria">
+    <field name="name">Silla</field>
+    <field name="descripcion">Categoria empleada para las sillas</field>
+  </record>
 
-      <record id="E3" model="upo_wood_app.envio">
-        <field name="direccion">Huelva, Calle Puerto 1, 5ºB</field>
-        <field name="cp">21003</field>
-        <field name="fechaEnvio">2020-11-20</field>
-        <field name="fechaLlegada">2020-11-26</field>
-      </record>
+  <record id="C2" model="upo_wood_app.categoria">
+    <field name="name">Mesa</field>
+    <field name="descripcion">Categoria empleada para las mesas</field>
+  </record>
 
-      <record id="E4" model="upo_wood_app.envio">
-        <field name="direccion">Sevilla, Calle Virgen de Consolacion 23, 3ºB</field>
-        <field name="cp">41001</field>
-        <field name="fechaEnvio">2020-10-17</field>
-        <field name="fechaLlegada">2020-10-24</field>
-      </record>
-      
-      <record id="PE1" model="upo_wood_app.persona">
-        <field name="nombre">Aurelio</field>
-        <field name="password">12345678</field>
-        <field name="direccion">Sevilla, Calle Sepia 3, 2ºB</field>
-        <field name="name">55483719V</field>
-        <field name="email">aurelio@upo.es</field>
-        <field name="telefono">678453442</field>
-        <field name="isEmpleado">Cliente</field>
-      </record>
-      
-      <record id="PE2" model="upo_wood_app.persona">
-        <field name="nombre">Pepe</field>
-        <field name="password">12345678</field>
-        <field name="direccion">Punta Umbría, Calle Choco 2, 1ºA</field>
-        <field name="name">78482719G</field>
-        <field name="email">pepe@upo.es</field>
-        <field name="telefono">642124869</field>
-        <field name="isEmpleado">Cliente</field>
-      </record>
+  <record id="C3" model="upo_wood_app.categoria">
+    <field name="name">Estanteria</field>
+    <field name="descripcion">Categoria empleada para las estanterias</field>
+  </record>
 
-      <record id="PE3" model="upo_wood_app.persona">
-        <field name="nombre">Patricia</field>
-        <field name="password">33123123</field>
-        <field name="direccion">Huelva, Calle Fuente 21, 3ºB</field>
-        <field name="name">49112288M</field>
-        <field name="email">patricia@upo.es</field>
-        <field name="telefono">643558121</field>
-        <field name="isEmpleado">Cliente</field>
-      </record>
-      
-      <record id="PE4" model="upo_wood_app.persona">
-        <field name="nombre">Arturo</field>
-        <field name="password">87654321</field>
-        <field name="direccion">Sevilla, Calle Génova 1, 8ºA</field>
-        <field name="name">78483476H</field>
-        <field name="email">arturo@upo.es</field>
-        <field name="telefono">642080900</field>
-        <field name="isEmpleado">Empleado</field>
-      </record>
-      
-      <record id="PE5" model="upo_wood_app.persona">
-        <field name="nombre">Manuel Jesus</field>
-        <field name="password">87654321</field>
-        <field name="direccion">Sevilla, Calle Brisa 3, 5ºC</field>
-        <field name="name">47754626T</field>
-        <field name="email">mj@upo.es</field>
-        <field name="telefono">600758999</field>
-        <field name="isEmpleado">Empleado</field>
-      </record>
+  <record id="C4" model="upo_wood_app.categoria">
+    <field name="name">Armario</field>
+    <field name="descripcion">Categoria empleada para las armarios</field>
+  </record>
 
-      <record id="PE6" model="upo_wood_app.persona">
-        <field name="nombre">Fede</field>
-        <field name="password">3312312</field>
-        <field name="direccion">Sevilla, Calle Niebla 2, 3ºA</field>
-        <field name="name">454112326N</field>
-        <field name="email">fede@upo.es</field>
-        <field name="telefono">612232999</field>
-        <field name="isEmpleado">Empleado</field>
-      </record>
+  <!--MATERIALES-->
+  <record id="M1" model="upo_wood_app.material">
+    <field name="idMaterial">1</field>
+    <field name="name">Bloques Caoba</field>
+    <field name="descripcion">Material de caoba</field>
+    <field name="precio">500</field>
+  </record>
 
-	  <record id="C1" model="upo_wood_app.categoria">
-        <field name="name">Silla</field>
-        <field name="descripcion">Categoria empleada para las sillas</field>
-      </record>
+  <record id="M2" model="upo_wood_app.material">
+    <field name="idMaterial">2</field>
+    <field name="name">Bloques Pino</field>
+    <field name="descripcion">Material de pino</field>
+    <field name="precio">300</field>
+  </record>
 
-      <record id="C2" model="upo_wood_app.categoria">
-        <field name="name">Mesa</field>
-        <field name="descripcion">Categoria empleada para las mesas</field>
-      </record>
+  <record id="M3" model="upo_wood_app.material">
+    <field name="idMaterial">3</field>
+    <field name="name">Bloques Nogal</field>
+    <field name="descripcion">Material de nogal</field>
+    <field name="precio">600</field>
+  </record>
 
-      <record id="C3" model="upo_wood_app.categoria">
-        <field name="name">Estanteria</field>
-        <field name="descripcion">Categoria empleada para las estanterias</field>
-      </record>
+  <!--PRODUCTOS-->
+  <record id="P1" model="upo_wood_app.producto">
+    <field name="name">Silla Landurk</field>
+    <field name="fechaFabricacion">2015-09-01</field>
+    <field name="precio">29</field>
+    <field name="stock">403</field>
+    <field name="categoria_id" ref="C1"></field>
+    <field name="material_id" ref="M1"></field>
+  </record>
 
-      <record id="C4" model="upo_wood_app.categoria">
-        <field name="name">Armario</field>
-        <field name="descripcion">Categoria empleada para las armarios</field>
-      </record>
+  <record id="P5" model="upo_wood_app.producto">
+    <field name="name">Silla Caoba</field>
+    <field name="fechaFabricacion">2015-09-01</field>
+    <field name="precio">29</field>
+    <field name="stock">403</field>
+    <field name="categoria_id" ref="C1"></field>
+    <field name="material_id" ref="M1"></field>
+  </record>
 
-      <record id="M1" model="upo_wood_app.material">
-        <field name="name">Bloques Caoba</field>
-        <field name="descripcion">Material de caoba</field>
-        <field name="precio ">500</field>
-        <field name="foto ">Foto Bloque</field>
-      </record>
+  <record id="P2" model="upo_wood_app.producto">
+    <field name="name">Mesa Caoba</field>
+    <field name="fechaFabricacion">2016-09-01</field>
+    <field name="precio">40</field>
+    <field name="stock">24</field>
+    <field name="categoria_id" ref="C2"></field>
+    <field name="material_id" ref="M1"></field>
+  </record>
 
-      <record id="M2" model="upo_wood_app.material">
-        <field name="name">Bloques Pino</field>
-        <field name="descripcion">Material de pino</field>
-        <field name="precio ">300</field>
-        <field name="foto ">Foto Bloque</field>
-      </record>
+  <record id="P3" model="upo_wood_app.producto">
+    <field name="name">Estanteria Pino</field>
+    <field name="fechaFabricacion">2020-05-11</field>
+    <field name="precio">299</field>
+    <field name="stock">10</field>
+    <field name="categoria_id" ref="C3"></field>
+    <field name="material_id" ref="M2"></field>
+  </record>
 
-      <record id="M3" model="upo_wood_app.material">
-        <field name="name">Bloques Nogal</field>
-        <field name="descripcion">Material de nogal</field>
-        <field name="precio ">600</field>
-        <field name="foto ">Foto Bloque</field>
-      </record>
+  <record id="P4" model="upo_wood_app.producto">
+    <field name="name">Armario Nogal</field>
+    <field name="fechaFabricacion">2019-01-20</field>
+    <field name="precio">499</field>
+    <field name="stock">15</field>
+    <field name="categoria_id" ref="C4"></field>
+    <field name="material_id" ref="M3"></field>
+  </record>
 
-      <record id="V1" model="upo_wood_app.venta">
-        <field name="name">Venta 1</field>
-        <field name="IVA">21</field>
-        <field name="fechaVenta ">2020-09-06</field>
-        <field name="total ">150</field>
-      </record>
+  <!--ENVIOS-->
 
-      <record id="V2" model="upo_wood_app.venta">
-        <field name="name">Venta 2</field>
-        <field name="IVA">21</field>
-        <field name="fechaVenta ">2020-10-10</field>
-        <field name="total ">300</field>
-      </record>
+  <record id="E1" model="upo_wood_app.envio">
+    <field name="name">1</field>
+    <field name="direccion">Sevilla, Calle Sepia 3, 2ºB</field>
+    <field name="cp">41010</field>
+    <field name="fechaEnvio">2020-09-01</field>
+    <field name="fechaLlegada">2020-09-12</field>
 
-      <record id="D1" model="upo_wood_app.devolucion">
-        <field name="name">Devolucion 1</field>
-        <field name="motivo">Articulo defectuoso</field>
-        <field name="isAprobado ">True</field>
-        <field name="fechaDevolucion ">2020-09-12</field>
-      </record>
+  </record>
 
-      <record id="D2" model="upo_wood_app.devolucion">
-        <field name="name">Devolucion 2</field>
-        <field name="motivo">Articulo en mal estado</field>
-        <field name="isAprobado ">True</field>
-        <field name="fechaDevolucion ">2020-08-02</field>
-      </record>
+  <record id="E2" model="upo_wood_app.envio">
+    <field name="name">2</field>
+    <field name="direccion">Punta Umbría, Calle Choco 2, 1ºA</field>
+    <field name="cp">21100</field>
+    <field name="fechaEnvio">2020-11-02</field>
+    <field name="fechaLlegada">2020-11-18</field>
+  </record>
 
-      <record id="A1" model="upo_wood_app.albaran">
-        <field name="name">Albaran 1</field>
-        <field name="isEntregado">True</field>
-        <field name="fechaLlegada">2020-09-10</field>
-        <field name="descripcion">2020-09-12</field>
-      </record>
+  <!--PERSONAS NO HEMOS CONSEGUIDO QUE FUNCIONE Y NO SABEMOS EL PORQUE-->
 
-      <record id="A2" model="upo_wood_app.albaran">
-        <field name="name">Albaran 1</field>
-        <field name="isEntregado">True</field>
-        <field name="fechaLlegada">2020-08-02</field>
-        <field name="descripcion">Albaran de una devolución</field>
-      </record>
+  <!--<record id="PERSONA1" model="upo_wood_app.persona">
+    <field name="nombre">Aurelio</field>
+    <field name="password">12345678W</field>
+    <field name="direccion">Sevilla, Calle Sepia 3, 2ºB</field>
+    <field name="name">55483719V</field>
+    <field name="email">aurelio@upo.es</field>
+    <field name="telefono">678453442</field>
+    <field name="isEmpleado">Cliente</field>
+  </record>
 
-      <record id="F1" model="upo_wood_app.factura">
-        <field name="name">Factura 1</field>
-        <field name="fecha">autodate</field>
-      </record>
+  <record id="PE2" model="upo_wood_app.persona">
+    <field name="nombre">Pepe</field>
+    <field name="password">12345678</field>
+    <field name="direccion">Punta Umbría, Calle Choco 2, 1ºA</field>
+    <field name="name">78482719G</field>
+    <field name="email">pepe@upo.es</field>
+    <field name="telefono">642124869</field>
+    <field name="isEmpleado">Cliente</field>
+  </record>
 
-      <record id="F2" model="upo_wood_app.factura">
-        <field name="name">Factura 2</field>
-        <field name="fecha">2020-10-10</field>
-      </record>
+  <record id="PE3" model="upo_wood_app.persona">
+    <field name="nombre">Patricia</field>
+    <field name="password">33123123</field>
+    <field name="direccion">Huelva, Calle Fuente 21, 3ºB</field>
+    <field name="name">49112288M</field>
+    <field name="email">patricia@upo.es</field>
+    <field name="telefono">643558121</field>
+    <field name="isEmpleado">Cliente</field>
+  </record>
 
-      <record id="PRV 1" model="upo_wood_app.proveedor">
-        <field name="name">Caoba Logistics</field>
-        <field name="direccion">Pamplona, Calle Petardo 21, 4ºE</field>
-        <field name="cif">B76365789</field>
-        <field name="telefono">905349009</field>
-      </record>
+  <record id="PE4" model="upo_wood_app.persona">
+    <field name="nombre">Arturo</field>
+    <field name="password">87654321</field>
+    <field name="direccion">Sevilla, Calle Génova 1, 8ºA</field>
+    <field name="name">78483476H</field>
+    <field name="email">arturo@upo.es</field>
+    <field name="telefono">642080900</field>
+    <field name="isEmpleado">Empleado</field>
+  </record>
 
-      <record id="PRV 2" model="upo_wood_app.proveedor">
-        <field name="name">Briconuba</field>
-        <field name="direccion">Huelva, Calle Alonso de Ojeda 15</field>
-        <field name="cif">M12334566</field>
-        <field name="telefono">959280284</field>
-      </record>
-     
+  <record id="PE5" model="upo_wood_app.persona">
+    <field name="nombre">Manuel Jesus</field>
+    <field name="password">87654321</field>
+    <field name="direccion">Sevilla, Calle Brisa 3, 5ºC</field>
+    <field name="name">47754626T</field>
+    <field name="email">mj@upo.es</field>
+    <field name="telefono">600758999</field>
+    <field name="isEmpleado">Empleado</field>
+  </record>
+
+  <record id="PE6" model="upo_wood_app.persona">
+    <field name="nombre">Fede</field>
+    <field name="password">3312312</field>
+    <field name="direccion">Sevilla, Calle Niebla 2, 3ºA</field>
+    <field name="name">454112326N</field>
+    <field name="email">fede@upo.es</field>
+    <field name="telefono">612232999</field>
+    <field name="isEmpleado">Empleado</field>
+  </record> -->
+
+
+  <!--VENTAS-->
+  <record id="V1" model="upo_wood_app.venta">
+    <field name="name">1</field>
+    <field name="IVA">21</field>
+    <field name="fechaVenta">2020-09-06</field>
+    <field name="total">69</field>
+    <field name="producto_ids" eval="[(6,0,[P1,P2,])]"></field>
+  </record>
+
+  <record id="V2" model="upo_wood_app.venta">
+    <field name="name">2</field>
+    <field name="IVA">21</field>
+    <field name="fechaVenta">2020-10-10</field>
+    <field name="total">499</field>
+    <field name="producto_ids" eval="[(6,0,[P4,])]"></field>
+  </record>
+
+  <!--DEVOLUCIONES-->
+  <record id="D1" model="upo_wood_app.devolucion">
+    <field name="name">1</field>
+    <field name="motivo">Articulo defectuoso</field>
+    <field name="isAprobado">True</field>
+    <field name="fechaDevolucion">2020-09-12</field>
+    <field name="venta_id" ref="V1"></field>
+  </record>
+
+  <record id="D2" model="upo_wood_app.devolucion">
+    <field name="name">2</field>
+    <field name="motivo">Articulo en mal estado</field>
+    <field name="isAprobado">True</field>
+    <field name="fechaDevolucion">2020-08-02</field>
+    <field name="venta_id" ref="V2"></field>
+  </record>
+
+  <!--ALBARANES-->
+  <record id="A1" model="upo_wood_app.albaran">
+    <field name="name">1</field>
+    <field name="isEntregado">True</field>
+    <field name="fechaLlegada">2020-09-10</field>
+    <field name="descripcion">2020-09-12</field>
+    <field name="envio_id" ref="E1"></field>
+  </record>
+
+  <record id="A2" model="upo_wood_app.albaran">
+    <field name="name">2</field>
+    <field name="isEntregado">True</field>
+    <field name="fechaLlegada">2020-08-02</field>
+    <field name="descripcion">Albaran de una devolución</field>
+    <field name="envio_id" ref="E2"></field>
+  </record>
+
+  <!--FACTURAS-->
+  <record id="F1" model="upo_wood_app.factura">
+    <field name="name">1</field>
+    <field name="fecha">2020-10-03</field>
+    <field name="venta_id" ref="V1"></field>
+  </record>
+
+  <record id="F2" model="upo_wood_app.factura">
+    <field name="name">2</field>
+    <field name="fecha">2020-10-10</field>
+    <field name="venta_id" ref="V2"></field>
+  </record>
+
+  <!--RELACIONES ENTRE CLASES-->
+
+  <record id="V1" model="upo_wood_app.venta">
+    <field name="factura_id" ref="F1"></field>
+    <field name="devolucion_id" ref="D1"></field>
+    <field name="envio_id" ref="E1"></field>
+
+  </record>
+
+  <record id="V2" model="upo_wood_app.venta">
+    <field name="factura_id" ref="F2"></field>
+    <field name="devolucion_id" ref="D2"></field>
+    <field name="envio_id" ref="E2"></field>
+  </record>
+
+  <record id="E1" model="upo_wood_app.envio">
+    <field name="venta_id" ref="V1"></field>
+    <field name="albaran_id" ref="A1"></field>
+  </record>
+
+  <record id="E2" model="upo_wood_app.envio">
+    <field name="venta_id" ref="V2"></field>
+    <field name="albaran_id" ref="A2"></field>
+  </record>
+
+
+  <!-- LA RELACION DE MATERIAL A PROVEEDOR NO FUNCIONA(ODOO NO ME CIERRA BIEN LA INSTRUCCION, MIRAR EN EL ERROR)
+  <record id="M1" model="upo_wood_app.material">
+    <field name="proveedor_ids" ref="PRV1"></field>
+  </record>
+
+   <record id="M2" model="upo_wood_app.material">
+        <field name="proveedor_ids" ref="PRV1"></field>
+  </record>
+
+  <record id="M3" model="upo_wood_app.material">
+        <field name="proveedor_ids" ref="PRV1"></field>
+  </record> 
+
+  <record id="PRV 1" model="upo_wood_app.proveedor">
+    <field name="material_ids" eval="[(6,0,[M1,M2,])]"></field>
+  </record>
+
+  <record id="PRV 2" model="upo_wood_app.proveedor">
+    <field name="material_ids" ref="M3"></field>
+  </record>
+  -->
+
+
 </odoo>
