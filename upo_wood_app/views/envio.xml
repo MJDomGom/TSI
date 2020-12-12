@@ -49,7 +49,7 @@
 			<field name="model">upo_wood_app.envio</field>
 			<field name="type">calendar</field>
 			<field name="arch" type="xml">
-				<calendar string="Envios" color="envio" date_start="fechaEnvio" date_stop="fechaLlegada" mode="month">
+				<calendar string="Envios" date_start="fechaEnvio" date_stop="fechaLlegada" mode="month">
 					<field name="name" />
 				</calendar>
 			</field>
