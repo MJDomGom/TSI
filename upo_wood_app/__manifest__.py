@@ -25,6 +25,8 @@
     'data': [
         'security/security.xml',
         'security/ir.model.access.csv',
+        'reports/reports.xml',
+        'reports/proveedor_report.xml',
         'views/producto.xml',
         'views/venta.xml',
         'views/devolucion.xml',
