@@ -1,0 +1,82 @@
+<odoo>
+    <template id="proveedor_report">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.internal_layout">
+                    <div class="page">
+                        <div class="oe_structure" />
+                        <div class="row" style="font-size: 20px; margin-bottom: 20px;">
+                            <span style="font-weight: bold;">cif del proveedor:</span>
+                            <span t-field="o.cif" />
+                            <br />
+                            <span style="font-size:16px; ">Nombre del proveedor:</span>
+                            <span style="font-size:16px;" t-field="o.direccion" />
+                        </div>
+                        <div class="row">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <p>
+                                            <strong>Horario: </strong>
+                                        </p>
+                                        <p>
+                                            <strong>Direccion: </strong>
+                                        </p>
+                                        <p>
+                                            <strong>Provincia: </strong>
+                                        </p>
+                                        <p>
+                                            <strong>Pais: </strong>
+                                        </p>
+                                        <p>
+                                            <strong>Capacidad maxima: </strong>
+                                        </p>
+                                    </td>
+                                    <td style="padding-left: 25px;">
+                                        <p t-field="o.name" />
+                                        <p t-field="o.direccion" />
+                                        <p t-field="o.telefono"/>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <div t-if="o.material_ids" class="row" style="margin-top: 40px; font-weight: bold; font-size: 16px;">
+                            Materiales asociados al proveedor <span t-field="o.name" />
+                        </div>
+                        <div t-if="o.material_ids" id="materiales_proveedor" class="row" style="margin-top: 12px;">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>ID Material</th>
+                                        <th>Nombre del material</th>
+                                        <th>Descripción</th>
+                                        <th>Precio</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <t t-foreach="o.material_ids" t-as="material">
+                                        <tr>
+                                            <td>
+                                                <p t-field="material.idMaterial" />
+                                            </td>
+                                            <td>
+                                                <p t-field="material.name" />
+                                            </td>
+                                            <td>
+                                                <p t-field="material.descripcion" />
+                                            </td>
+                                            <td>
+                                                <p t-field="material.precio" />
+                                            </td>
+                                        </tr>
+                                    </t>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>
