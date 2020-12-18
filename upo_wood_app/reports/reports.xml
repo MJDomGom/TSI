@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <report id="proveedor_report" string="Report" model="upo_wood_app.gym" report-type="qweb-pdf" name="upo_wood_app.proveedor_report"/>
+    <report id="proveedor_report" string="proveedor_report" model="upo_wood_app.proveedor" report-type="qweb-pdf" name="upo_wood_app.proveedor_report"/>
 </odoo>
