@@ -3,4 +3,5 @@
     <report id="proveedor_report" string="Informe de Proveedor" model="upo_wood_app.proveedor" report_type="qweb-pdf" name="upo_wood_app.proveedor_report"/>
     <report id="producto_report" string="Informe de Producto" model="upo_wood_app.producto" report_type="qweb-pdf" name="upo_wood_app.producto_report"/>
     <report id="factura_report" string="Informe de Factura" model="upo_wood_app.factura" report_type="qweb-pdf" name="upo_wood_app.factura_report"/>
+    <report id="albaran_report" string="Informe de Albaran" model="upo_wood_app.albaran" report_type="qweb-pdf" name="upo_wood_app.albaran_report" />
 </odoo>

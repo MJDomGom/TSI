@@ -5,11 +5,11 @@
 		<field name="arch" type="xml">
 			<form string="Envios">
 				<header>
-					<button name="btn_submit_to_preparando" string="En preparacion" type="object" class="oe_highlight" />
-					<button name="btn_submit_to_enviado" string="Enviado" type="object" class="oe_highlight" />
-					<button name="btn_submit_to_reparto" string="En reparto" type="object" class="oe_highlight" />
-					<button name="btn_submit_to_entregado" string="Entregado" type="object" class="oe_highlight" />
 					<button name="btn_submit_to_cancelado" string="Cancelado" type="object" class="oe_highlight" />
+					<button name="btn_submit_to_entregado" string="Entregado" type="object" class="oe_highlight" />
+					<button name="btn_submit_to_reparto" string="En reparto" type="object" class="oe_highlight" />
+					<button name="btn_submit_to_enviado" string="Enviado" type="object" class="oe_highlight" />
+					<button name="btn_submit_to_preparando" string="En preparacion" type="object" class="oe_highlight" />
 				</header>
 				<sheet layout="auto">
 					<group>
@@ -49,17 +49,6 @@
 				<field name="fechaEnvio" />
 				<field name="fechaLlegada"/>
 			</tree>
-		</field>
-	</record>
-
-	<record model="ir.ui.view" id="upo_wood_app_envio_view">
-		<field name="name">envio Calendar</field>
-		<field name="model">upo_wood_app.envio</field>
-		<field name="type">calendar</field>
-		<field name="arch" type="xml">
-			<calendar string="Envios" date_start="fechaEnvio" date_stop="fechaLlegada" mode="month">
-				<field name="name" />
-			</calendar>
 		</field>
 	</record>
 

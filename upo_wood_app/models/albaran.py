@@ -11,3 +11,9 @@ class Albaran(models.Model):
     #Añadir las relaciones entre clases
     envio_id = fields.Many2one("upo_wood_app.venta",string="Envio relacionado con el albaran")
     _sql_constraints = [('albaran_name_unique','UNIQUE (name)','El número del albarán debe ser único')]
+
+    @api.constrains('descripcion')
+    def _check_len_content(self):
+        if len(self.descripcion) > 100:
+            raise models.ValidationError('Solo se permite descripciones de un tamaño menor de 100 caracteres')
+

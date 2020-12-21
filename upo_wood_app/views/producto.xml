@@ -1,58 +1,72 @@
 <odoo>
-		<record model="ir.ui.view" id="upo_wood_app_producto_form">
-			<field name="name">producto.form</field>
-			<field name="model">upo_wood_app.producto</field>
-			<field name="arch" type="xml">
-				<form string="Productos">
-					<sheet layout="auto">
-                        <group>
-                            <field name="name" />
-                        </group>
-						<group>
-           					 <field name="foto" nolabel="1" widget="image" class="oe_left oe_avatar" />
-          				</group>
-                         <notebook>
-                            <page name="datos_productos" string="Datos del producto">
-                                <group>
-					                <field name="fechaFabricacion" />
-					                <field name="precio" widget="monetary"/> 
-					                <field name="stock" />
-									<field name="venta_ids">
-                                        <field name="name" />
-                                    </field>
-									<field name="categoria_id">
-                                        <field name="name" />
-                                    </field>
-									<field name="material_id">
-                                        <field name="name" />
-                                    </field>
-                                </group>
-                            </page>
-                        </notebook>            
-                    </sheet>
-				</form>
-			</field>
-		</record>
+	<record model="ir.ui.view" id="upo_wood_app_producto_form">
+		<field name="name">producto.form</field>
+		<field name="model">upo_wood_app.producto</field>
+		<field name="arch" type="xml">
+			<form string="Productos">
+				<sheet layout="auto">
+					<group>
+						<field name="name" />
+					</group>
+					<group>
+						<field name="foto" nolabel="1" widget="image" class="oe_left oe_avatar" />
+					</group>
+					<notebook>
+						<page name="datos_productos" string="Datos del producto">
+							<group>
+								<field name="fechaFabricacion" />
+								<field name="precio" widget="monetary"/>
+								<field name="stock" />
+								<field name="venta_ids">
+									<field name="name" />
+								</field>
+								<field name="categoria_id">
+									<field name="name" />
+								</field>
+								<field name="material_id">
+									<field name="name" />
+								</field>
+							</group>
+						</page>
+					</notebook>
+				</sheet>
+			</form>
+		</field>
+	</record>
 
-		<record model="ir.ui.view" id="upo_wood_app_producto_tree">
-			<field name="name">productos.tree</field>
-			<field name="model">upo_wood_app.producto</field>
-			<field name="arch" type="xml">
-				<tree string="Tree de productos">
-					<field name="name" />
-					<field name="fechaFabricacion" />
-					<field name="precio" />
-					<field name="stock" />
-				</tree>
-			</field>
-		</record>
+	<record model="ir.ui.view" id="upo_wood_app_producto_tree">
+		<field name="name">productos.tree</field>
+		<field name="model">upo_wood_app.producto</field>
+		<field name="arch" type="xml">
+			<tree string="Tree de productos">
+				<field name="name" />
+				<field name="fechaFabricacion" />
+				<field name="precio" />
+				<field name="stock" />
+			</tree>
+		</field>
+	</record>
 
-        <record id="producto_list_action" model="ir.actions.act_window">
-            <field name="name">Producto</field>
-            <field name="res_model">upo_wood_app.producto</field>
-            <field name="view_mode">tree,form</field>
-            <field name="help" type="html">
-                 <p class="o_view_nocontent_smiling_face">Crear el primer producto</p>
-            </field>
-        </record>
+	<record id="upo_wood_app_producto_search" model="ir.ui.view">
+		<field name="name">upo_wood_app.producto.search</field>
+		<field name="model">upo_wood_app.producto</field>
+		<field name="arch" type="xml">
+			<search>
+				<filter name="search_stock" string="Stock > 50" domain="[('stock','>', 50)]" />
+				<separator orientation="vertical" />
+				<group expand="0" string="Agrupar por...">
+					<filter name="group_by_categoria" string="Categoria" context="{'group_by':'categoria_id'}" />
+				</group>
+			</search>
+		</field>
+	</record>
+
+	<record id="producto_list_action" model="ir.actions.act_window">
+		<field name="name">Producto</field>
+		<field name="res_model">upo_wood_app.producto</field>
+		<field name="view_mode">tree,form</field>
+		<field name="help" type="html">
+			<p class="o_view_nocontent_smiling_face">Crear el primer producto</p>
+		</field>
+	</record>
 </odoo>

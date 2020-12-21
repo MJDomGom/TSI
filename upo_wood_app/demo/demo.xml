@@ -3,14 +3,14 @@
   <record id="PRV1" model="upo_wood_app.proveedor">
     <field name="name">Caoba Logistics</field>
     <field name="direccion">Pamplona, Calle Petardo 21, 4ºE</field>
-    <field name="cif">B76365789</field>
+    <field name="cif">B7636578</field>
     <field name="telefono">905349009</field>
   </record>
 
   <record id="PRV2" model="upo_wood_app.proveedor">
     <field name="name">Briconuba</field>
     <field name="direccion">Huelva, Calle Alonso de Ojeda 15</field>
-    <field name="cif">M12334566</field>
+    <field name="cif">M1233456</field>
     <field name="telefono">959280284</field>
   </record>
 

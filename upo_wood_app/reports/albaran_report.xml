@@ -1,0 +1,41 @@
+<odoo>
+    <template id="albaran_report">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.external_layout">                    <!-- Probad tambien con web.internal_layout -->
+                    <div class="page">
+                        <div class="oe_structure" />
+                        <div class="row" style="font-size: 24px; margin-bottom: 20px;">
+                            <span style="font-weight: bold; text-decoration: underline; ">Numero de Albaran:</span>
+                            <span style="color: #999999;" t-field="o.name" />
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-8" style="text-align: left; margin: auto; padding-left: 15px; padding-top: 10px;">
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <p>
+                                                <strong>Estado de la entrega: </strong>
+                                            </p>
+                                            <p>
+                                                <strong>Fecha de llegada: </strong>
+                                            </p>
+                                            <p>
+                                                <strong>Descripcion: </strong>
+                                            </p>
+                                        </td>
+                                        <td style="padding-left: 10px;">
+                                            <p t-field="o.isEntregado" />
+                                            <p t-field="o.fechaLlegada" />
+                                            <p t-field="o.descripcion" />
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>
