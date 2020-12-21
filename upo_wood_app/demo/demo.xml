@@ -122,69 +122,6 @@
     <field name="fechaLlegada">2020-11-18</field>
   </record>
 
-  <!--PERSONAS NO HEMOS CONSEGUIDO QUE FUNCIONE Y NO SABEMOS EL PORQUE-->
-
-  <!--<record id="PERSONA1" model="upo_wood_app.persona">
-    <field name="nombre">Aurelio</field>
-    <field name="password">12345678W</field>
-    <field name="direccion">Sevilla, Calle Sepia 3, 2ºB</field>
-    <field name="name">55483719V</field>
-    <field name="email">aurelio@upo.es</field>
-    <field name="telefono">678453442</field>
-    <field name="isEmpleado">Cliente</field>
-  </record>
-
-  <record id="PE2" model="upo_wood_app.persona">
-    <field name="nombre">Pepe</field>
-    <field name="password">12345678</field>
-    <field name="direccion">Punta Umbría, Calle Choco 2, 1ºA</field>
-    <field name="name">78482719G</field>
-    <field name="email">pepe@upo.es</field>
-    <field name="telefono">642124869</field>
-    <field name="isEmpleado">Cliente</field>
-  </record>
-
-  <record id="PE3" model="upo_wood_app.persona">
-    <field name="nombre">Patricia</field>
-    <field name="password">33123123</field>
-    <field name="direccion">Huelva, Calle Fuente 21, 3ºB</field>
-    <field name="name">49112288M</field>
-    <field name="email">patricia@upo.es</field>
-    <field name="telefono">643558121</field>
-    <field name="isEmpleado">Cliente</field>
-  </record>
-
-  <record id="PE4" model="upo_wood_app.persona">
-    <field name="nombre">Arturo</field>
-    <field name="password">87654321</field>
-    <field name="direccion">Sevilla, Calle Génova 1, 8ºA</field>
-    <field name="name">78483476H</field>
-    <field name="email">arturo@upo.es</field>
-    <field name="telefono">642080900</field>
-    <field name="isEmpleado">Empleado</field>
-  </record>
-
-  <record id="PE5" model="upo_wood_app.persona">
-    <field name="nombre">Manuel Jesus</field>
-    <field name="password">87654321</field>
-    <field name="direccion">Sevilla, Calle Brisa 3, 5ºC</field>
-    <field name="name">47754626T</field>
-    <field name="email">mj@upo.es</field>
-    <field name="telefono">600758999</field>
-    <field name="isEmpleado">Empleado</field>
-  </record>
-
-  <record id="PE6" model="upo_wood_app.persona">
-    <field name="nombre">Fede</field>
-    <field name="password">3312312</field>
-    <field name="direccion">Sevilla, Calle Niebla 2, 3ºA</field>
-    <field name="name">454112326N</field>
-    <field name="email">fede@upo.es</field>
-    <field name="telefono">612232999</field>
-    <field name="isEmpleado">Empleado</field>
-  </record> -->
-
-
   <!--VENTAS-->
   <record id="V1" model="upo_wood_app.venta">
     <field name="name">1</field>
@@ -271,29 +208,5 @@
     <field name="venta_id" ref="V2"></field>
     <field name="albaran_id" ref="A2"></field>
   </record>
-
-
-  <!-- LA RELACION DE MATERIAL A PROVEEDOR NO FUNCIONA(ODOO NO ME CIERRA BIEN LA INSTRUCCION, MIRAR EN EL ERROR)
-  <record id="M1" model="upo_wood_app.material">
-    <field name="proveedor_ids" ref="PRV1"></field>
-  </record>
-
-   <record id="M2" model="upo_wood_app.material">
-        <field name="proveedor_ids" ref="PRV1"></field>
-  </record>
-
-  <record id="M3" model="upo_wood_app.material">
-        <field name="proveedor_ids" ref="PRV1"></field>
-  </record> 
-
-  <record id="PRV 1" model="upo_wood_app.proveedor">
-    <field name="material_ids" eval="[(6,0,[M1,M2,])]"></field>
-  </record>
-
-  <record id="PRV 2" model="upo_wood_app.proveedor">
-    <field name="material_ids" ref="M3"></field>
-  </record>
-  -->
-
 
 </odoo>

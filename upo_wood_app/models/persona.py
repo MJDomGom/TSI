@@ -21,7 +21,8 @@ class Persona(models.Model):
         "upo_wood_app.venta", string="Ventas asociadas a la persona")
     _sql_constraints = [('persona_name_unique', 'UNIQUE (name)',
                          'El dni de la persona ya está registrado')]
-
+                         
+    #Funcion para que el DNI tenga el formato correcto
     @api.constrains('name')
     def _check_name(self):
             if not re.match("/^[0-9]{8}[TRWAGMYFPDXBNJZSQVHLCKE]$/",self.name):

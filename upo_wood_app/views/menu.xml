@@ -17,21 +17,3 @@
   <menuitem name="Proveedores" id="proveedores_menu" parent="upo_wood_app.menu_1" action="proveedor_list_action"/>
   <menuitem name="Envios" id="envios_menu" parent="upo_wood_app.menu_1" action="envio_list_action"/>
 </odoo>
-
-
-
-<!--
-    <menuitem name="UpoWood_app" id="upo_wood_app.menu_root"/>
--->
-    <!-- menu categories -->
-<!--
-    <menuitem name="Menu 1" id="upo_wood_app.menu_1" parent="upo_wood_app.menu_root"/>
-    <menuitem name="Menu 2" id="upo_wood_app.menu_2" parent="upo_wood_app.menu_root"/>
--->
-    <!-- actions -->
-<!--
-    <menuitem name="List" id="upo_wood_app.menu_1_list" parent="upo_wood_app.menu_1"
-              action="upo_wood_app.action_window"/>
-    <menuitem name="Server to list" id="upo_wood_app" parent="upo_wood_app.menu_2"
-              action="upo_wood_app.action_server"/>
--->

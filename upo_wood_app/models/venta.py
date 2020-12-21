@@ -16,6 +16,7 @@ class Venta(models.Model):
     factura_id = fields.Many2one("upo_wood_app.factura",string="Factura asociado a la venta")
     _sql_constraints = [('venta_name_unique','UNIQUE (name)','El número de la venta debe ser único')]
 
+    #Funcion para que el IVA no sea un numero negativo
     @api.constrains('IVA')
     def _check_IVA(self):
         if self.IVA < 0:
