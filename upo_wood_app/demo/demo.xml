@@ -206,7 +206,6 @@
   <record id="D1" model="upo_wood_app.devolucion">
     <field name="name">1</field>
     <field name="motivo">Articulo defectuoso</field>
-    <field name="isAprobado">True</field>
     <field name="fechaDevolucion">2020-09-12</field>
     <field name="venta_id" ref="V1"></field>
   </record>
@@ -214,7 +213,6 @@
   <record id="D2" model="upo_wood_app.devolucion">
     <field name="name">2</field>
     <field name="motivo">Articulo en mal estado</field>
-    <field name="isAprobado">True</field>
     <field name="fechaDevolucion">2020-08-02</field>
     <field name="venta_id" ref="V2"></field>
   </record>

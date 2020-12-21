@@ -1,0 +1,135 @@
+<odoo>
+    <template id="producto_report">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.internal_layout">
+                    <div class="page">
+                        <div class="oe_structure" />
+                        <div class="row" style="font-size: 20px; margin-bottom: 20px;">
+                            <span style="font-weight: bold;">Nombre del producto:</span>
+                            <span t-field="o.name" />
+                        </div>
+                        <div class="row">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <p>
+                                            <strong>Fecha de fabricación: </strong>
+                                        </p>
+                                        <p>
+                                            <strong>Precio: </strong>
+                                        </p>
+                                        <p>
+                                            <strong>Stock: </strong>
+                                        </p>
+                                    </td>
+                                    <td style="padding-left: 25px;">
+                                        <p t-field="o.fechaFabricacion" />
+                                        <p t-field="o.precio" />
+                                        <p t-field="o.stock"/>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <!-- <div t-if="o.material_id" class="row" style="margin-top: 40px; font-weight: bold; font-size: 16px;">
+                            Materiales asociados al producto <span t-field="o.name" />
+                        </div>
+                        <div t-if="o.material_id" id="materiales_producto" class="row" style="margin-top: 12px;">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>ID Material</th>
+                                        <th>Nombre del material</th>
+                                        <th>Descripción</th>
+                                        <th>Precio</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <t t-foreach="o.material_id" t-as="material">
+                                        <tr>
+                                            <td>
+                                                <p t-field="material.idMaterial" />
+                                            </td>
+                                            <td>
+                                                <p t-field="material.name" />
+                                            </td>
+                                            <td>
+                                                <p t-field="material.descripcion" />
+                                            </td>
+                                            <td>
+                                                <p t-field="material.precio" />
+                                            </td>
+                                        </tr>
+                                    </t>
+                                </tbody>
+                            </table>
+                        </div>
+                        <br />
+                        <p>Deberia haber un salto de linea aqui</p>
+                        <div t-if="o.venta_ids" class="row" style="margin-top: 40px; font-weight: bold; font-size: 16px;">
+                            Ventas asociados al producto <span t-field="o.name" />
+                        </div>
+                        <div t-if="o.venta_ids" id="ventas_producto" class="row" style="margin-top: 12px;">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Numero de venta</th>
+                                        <th>IVA</th>
+                                        <th>Fecha de Venta</th>
+                                        <th>Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <t t-foreach="o.venta_ids" t-as="venta">
+                                        <tr>
+                                            <td>
+                                                <p t-field="venta.name" />
+                                            </td>
+                                            <td>
+                                                <p t-field="venta.IVA" />
+                                            </td>
+                                            <td>
+                                                <p t-field="venta.fechaVenta" />
+                                            </td>
+                                            <td>
+                                                <p t-field="venta.total" />
+                                            </td>
+                                        </tr>
+                                    </t>
+                                </tbody>
+                            </table>
+                        </div>
+                        <br />
+                        <p>Deberia haber un salto de linea aqui</p>
+                        <div t-if="o.categoria_id" class="row" style="margin-top: 40px; font-weight: bold; font-size: 16px;">
+                            Categoria asociada al producto <span t-field="o.name" />
+                        </div>
+                        <div t-if="o.categoria_id" id="categoria_producto" class="row" style="margin-top: 12px;">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Nombre categoria</th>
+                                        <th>Descripcion</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <t t-foreach="o.categoria_id" t-as="categoria">
+                                        <tr>
+                                            <td>
+                                                <p t-field="categoria.name" />
+                                            </td>
+                                            <td>
+                                                <p t-field="categoria.descripcion" />
+                                            </td>
+                                        </tr>
+                                    </t>
+                                </tbody>
+                            </table>
+                        </div> -->
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

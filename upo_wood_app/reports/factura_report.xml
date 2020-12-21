@@ -1,12 +1,12 @@
 <odoo>
-    <template id="proveedor_report">
+    <template id="factura_report">
         <t t-call="web.html_container">
             <t t-foreach="docs" t-as="o">
                 <t t-call="web.internal_layout">
                     <div class="page">
                         <div class="oe_structure" />
                         <div class="row" style="font-size: 20px; margin-bottom: 20px;">
-                            <span style="font-weight: bold;">Cif del proveedor:</span>
+                            <span style="font-weight: bold;">Numero de la factura:</span>
                             <span t-field="o.cif" />
                         </div>
                         <div class="row">
@@ -14,51 +14,43 @@
                                 <tr>
                                     <td>
                                         <p>
-                                            <strong>Nombre del proveedor: </strong>
-                                        </p>
-                                        <p>
-                                            <strong>Direccion: </strong>
-                                        </p>
-                                        <p>
-                                            <strong>Telefono: </strong>
+                                            <strong>Fecha de la factura: </strong>
                                         </p>
                                     </td>
                                     <td style="padding-left: 25px;">
-                                        <p t-field="o.name" />
-                                        <p t-field="o.direccion" />
-                                        <p t-field="o.telefono"/>
+                                        <p t-field="o.fecha" />
                                     </td>
                                 </tr>
                             </table>
                         </div>
 
-                        <div t-if="o.material_ids" class="row" style="margin-top: 40px; font-weight: bold; font-size: 16px;">
-                            Materiales asociados al proveedor <span t-field="o.name" />
+                        <div t-if="o.venta_id" class="row" style="margin-top: 40px; font-weight: bold; font-size: 16px;">
+                            Venta asociada a la factura <span t-field="o.name" />
                         </div>
-                        <div t-if="o.material_ids" id="materiales_proveedor" class="row" style="margin-top: 12px;">
+                        <div t-if="o.venta_id" id="venta_factura" class="row" style="margin-top: 12px;">
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th>ID Material</th>
-                                        <th>Nombre del material</th>
-                                        <th>Descripción</th>
-                                        <th>Precio</th>
+                                        <th>Numero de venta</th>
+                                        <th>IVA</th>
+                                        <th>Fecha de Venta</th>
+                                        <th>Total</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <t t-foreach="o.material_ids" t-as="material">
+                                    <t t-foreach="o.venta_id" t-as="venta">
                                         <tr>
                                             <td>
-                                                <p t-field="material.idMaterial" />
+                                                <p t-field="venta.name" />
                                             </td>
                                             <td>
-                                                <p t-field="material.name" />
+                                                <p t-field="venta.IVA" />
                                             </td>
                                             <td>
-                                                <p t-field="material.descripcion" />
+                                                <p t-field="venta.fechaVenta" />
                                             </td>
                                             <td>
-                                                <p t-field="material.precio" />
+                                                <p t-field="venta.total" />
                                             </td>
                                         </tr>
                                     </t>
