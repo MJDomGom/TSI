@@ -6,7 +6,7 @@
                     <div class="page">
                         <div class="oe_structure" />
                         <div class="row" style="font-size: 20px; margin-bottom: 20px;">
-                            <span style="font-weight: bold;">cif del proveedor:</span>
+                            <span style="font-weight: bold;">Cif del proveedor:</span>
                             <span t-field="o.cif" />
                             <br />
                             <span style="font-size:16px; ">Nombre del proveedor:</span>
@@ -17,19 +17,13 @@
                                 <tr>
                                     <td>
                                         <p>
-                                            <strong>Horario: </strong>
+                                            <strong>Nombre del proveedor: </strong>
                                         </p>
                                         <p>
                                             <strong>Direccion: </strong>
                                         </p>
                                         <p>
-                                            <strong>Provincia: </strong>
-                                        </p>
-                                        <p>
-                                            <strong>Pais: </strong>
-                                        </p>
-                                        <p>
-                                            <strong>Capacidad maxima: </strong>
+                                            <strong>Telefono: </strong>
                                         </p>
                                     </td>
                                     <td style="padding-left: 25px;">
