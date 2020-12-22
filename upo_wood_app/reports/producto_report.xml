@@ -32,7 +32,7 @@
                             </table>
                         </div>
 
-                        <!-- <div t-if="o.material_id" class="row" style="margin-top: 40px; font-weight: bold; font-size: 16px;">
+                        <div t-if="o.material_id" class="row" style="margin-top: 40px; font-weight: bold; font-size: 16px;">
                             Materiales asociados al producto <span t-field="o.name" />
                         </div>
                         <div t-if="o.material_id" id="materiales_producto" class="row" style="margin-top: 12px;">
@@ -66,7 +66,6 @@
                             </table>
                         </div>
                         <br />
-                        <p>Deberia haber un salto de linea aqui</p>
                         <div t-if="o.venta_ids" class="row" style="margin-top: 40px; font-weight: bold; font-size: 16px;">
                             Ventas asociados al producto <span t-field="o.name" />
                         </div>
@@ -101,7 +100,6 @@
                             </table>
                         </div>
                         <br />
-                        <p>Deberia haber un salto de linea aqui</p>
                         <div t-if="o.categoria_id" class="row" style="margin-top: 40px; font-weight: bold; font-size: 16px;">
                             Categoria asociada al producto <span t-field="o.name" />
                         </div>
@@ -126,7 +124,7 @@
                                     </t>
                                 </tbody>
                             </table>
-                        </div> -->
+                        </div>
                     </div>
                 </t>
             </t>

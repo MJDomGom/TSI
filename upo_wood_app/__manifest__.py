@@ -3,11 +3,10 @@
     'name': "UpoWood_app",
 
     'summary': """
-        Sumario del modulo UPOWOOD""",
+        Modulo para la gestion de empresas con productos de madera.""",
 
     'description': """
-        Descripcion del modulo UPOWOOD
-    """,
+        UPOWOOD es un modulo para empresas PYMEs orientadas al negocio de la madera para la gestion de la misma.""",
 
     'author': "My Company",
     'website': "http://www.yourcompany.com",
@@ -27,6 +26,8 @@
         'security/ir.model.access.csv',
         'reports/reports.xml',
         'reports/proveedor_report.xml',
+        'reports/factura_report.xml',
+        'reports/producto_report.xml',
         'views/producto.xml',
         'views/venta.xml',
         'views/devolucion.xml',
